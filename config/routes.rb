@@ -2,6 +2,8 @@ SopaEnSobre::Application.routes.draw do
   resources :users
   
   get "tab_pages/index"
+  
+  get "app_pages/index"
 
 
   # The priority is based upon order of creation:
