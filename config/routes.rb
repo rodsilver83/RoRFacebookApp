@@ -4,6 +4,8 @@ SopaEnSobre::Application.routes.draw do
   get "tab_pages/index"
   
   get "app_pages/index"
+  
+  match "app_pages/" => 'app_pages#index' 
 
 
   # The priority is based upon order of creation:
