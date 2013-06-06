@@ -11,6 +11,8 @@ SopaEnSobre::Application.routes.draw do
   
   get "facebook/authorize"
   
+  get "facebook/authorize_callback"
+  
   post "app_pages/register"
   
   match "app_pages/" => 'app_pages#index' 
