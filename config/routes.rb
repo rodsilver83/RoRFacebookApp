@@ -5,9 +5,21 @@ SopaEnSobre::Application.routes.draw do
   
   get "app_pages/index"
   
+  get "app_pages/step1"
+  
+  get "app_pages/step2"
+  
+  get "facebook/authorize"
+  
+  post "app_pages/register"
+  
   match "app_pages/" => 'app_pages#index' 
   
-  match "tab_pages/" => 'tab_pages#index' 
+  match "tab_pages/" => 'tab_pages#index'
+  
+  match "paso1" => 'app_pages#step1'
+  
+  match "registro" => 'app_pages#register'
 
 
   # The priority is based upon order of creation:
