@@ -1,13 +1,9 @@
 SopaEnSobre::Application.routes.draw do
   resources :users
   
-  root :to => 'home#index'
- 
-  match '/index' => 'home#index'
-  
-  match '/login' => 'home#login'
-  
   get "tab_pages/index"
+  
+  post "tab_pages/post"
   
   get "app_pages/index"
   
@@ -26,7 +22,7 @@ SopaEnSobre::Application.routes.draw do
   match "app_pages/" => 'app_pages#index' 
   
   match "tab_pages/" => 'tab_pages#index'
-  
+    
   match "paso1" => 'app_pages#step1'
   
   match "registro" => 'app_pages#register'

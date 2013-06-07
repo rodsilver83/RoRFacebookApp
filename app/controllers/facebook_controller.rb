@@ -1,8 +1,6 @@
 class FacebookController < ApplicationController
   def authorize
-    client = FBGraph::Client.new(:client_id => '114212485420577',:secret_id =>'d61d6dc8d2c7aa636f5826891973598a')
-    session[:client] = client
-    redirect_to client.authorization.authorize_url(:redirect_uri => 'http://sopaensobre.herokuapp.com/facebook/authorize_callback' , :scope => 'email,user_photos')
+    redirect_to "https://graph.facebook.com/oauth/access_token?client_id=115162228693126&redirect_uri=http://apps.facebook.com/sopanesobre-dev&client_secret=15e9f5c1460c9c5c5531996c5a1719d2&code=#{params[:code]}"
   end
   
   def authorize_callback
