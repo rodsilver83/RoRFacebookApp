@@ -1,6 +1,12 @@
 SopaEnSobre::Application.routes.draw do
   resources :users
   
+  root :to => 'home#index'
+ 
+  match '/index' => 'home#index'
+  
+  match '/login' => 'home#login'
+  
   get "tab_pages/index"
   
   get "app_pages/index"
